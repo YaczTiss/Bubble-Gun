@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: character (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1342191302868064829, guid: 522d88cf08172cb39b3cfcf6fdf41c2c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3163053224341319396, guid: 522d88cf08172cb39b3cfcf6fdf41c2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -2365,7 +2369,7 @@ Transform:
   m_GameObject: {fileID: 491424201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.92, y: -3.01, z: -0.88}
+  m_LocalPosition: {x: 7.04, y: -3.01, z: -0.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3453,7 +3457,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229911478}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -5524,7 +5528,8 @@ Transform:
   - {fileID: 1229911479}
   - {fileID: 403494579}
   - {fileID: 2125977086}
-  m_Father: {fileID: 0}
+  - {fileID: 491424202}
+  m_Father: {fileID: 1943181677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546428226
 GameObject:
@@ -5751,7 +5756,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2143402873}
   - {fileID: 1432488748}
   - {fileID: 84575032}
   - {fileID: 2088065428}
@@ -7134,7 +7138,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1689049111}
-  - {fileID: 1432488748}
-  - {fileID: 84575032}
-  - {fileID: 2088065428}
   - {fileID: 24043570}
+  - {fileID: 1943181677}
+  - {fileID: 150336210}
