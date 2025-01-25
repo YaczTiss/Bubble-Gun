@@ -21,15 +21,20 @@ public class playerController : MonoBehaviour
 
         // Flip the player's scale based on input
         if (horizontalInput > 0.01f){
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(4,4,4);
         }
         else if (horizontalInput < (-0.01f)){
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-4, 4, 4);
         }
 
         // Jump logic
         if (Input.GetKey(KeyCode.Space) && grounded)
             Jump();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
     }
 
     private void Jump()
