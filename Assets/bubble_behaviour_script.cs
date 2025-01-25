@@ -1,39 +1,82 @@
-using System.Timers;
 using UnityEngine;
 using System.Collections;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class bubble_behaviour_script : MonoBehaviour
 {
+    public playerController facing_left_bool;
     public GameObject bubble;
-    float timer = 0.1f;
-    private float dashingPower = 12f;
-    bool isDashing;
+    private bool isFacingRight = true;
+    float timer = 0.2f;
+    private float dashingPower = 12;
     public Rigidbody2D rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    float value_changer = 1;
+    bool isDashing = false; // Flag to prevent overlapping coroutines
+    float Elapsedtime;
+    private float horizontal;
+
     void Start()
     {
-        
-
+        // Get the reference to the playerController
+        facing_left_bool = GameObject.FindGameObjectWithTag("Player").GetComponent<playerController>();
     }
-    float Elapsedtime;
-    // Update is called once per frame
+
     void Update()
     {
         Elapsedtime += Time.deltaTime;
-        if (Elapsedtime < timer)
+
+        // Start the launch coroutine only once during the time interval
+        if (Elapsedtime < timer && !isDashing)
         {
             StartCoroutine(Launch());
         }
+
+        // Destroy the bubble after 8 seconds
+        if (Elapsedtime > 8f)
+        {
+            GameObject.Destroy(bubble);
+        }
     }
+
     private IEnumerator Launch()
     {
+
+        horizontal = Input.GetAxis("Horizontal");
         isDashing = true;
-        float originalGravity = -0.1f;
+
+        // Save the original gravity scale
+        float originalGravity = rb.gravityScale;
+  
+
+        // Temporarily disable gravity
         rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+
+        // Set velocity for dashing
+        rb.linearVelocity = new Vector2(horizontal * dashingPower, 0f);
+
+        // Wait for the dash timer
         yield return new WaitForSeconds(timer);
+
+        // Restore gravity scale
         rb.gravityScale = originalGravity;
-        isDashing = false;
-        yield return new WaitForSeconds(timer);
+        Debug.Log($"Restored Gravity: {rb.gravityScale}");
+
+        isDashing = false; // Reset the flag
+
+
     }
+
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            Vector3 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+
 }
+
