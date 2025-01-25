@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Button : MonoBehaviour
 {
     [SerializeField] private Transform prev_room;
     [SerializeField] private Transform next_room;
     [SerializeField] private CameraController camera;
-    [SerializeField] private bool activate = true;
+    private bool activate;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
