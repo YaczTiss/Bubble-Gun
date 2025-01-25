@@ -176,12 +176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36595f56fd2306bca7fd5f92f69c5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bubble: {fileID: 0}
+  body: {fileID: 0}
   speed: 5
   jump: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
   jumpPower: 0
+  shootingpoint: {fileID: 0}
 --- !u!1 &2775783263479193281
 GameObject:
   m_ObjectHideFlags: 0
