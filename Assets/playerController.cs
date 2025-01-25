@@ -4,6 +4,7 @@ public class playerController : MonoBehaviour
 {
     private Rigidbody2D body;
     public float speed = 5f;
+    public float jump = 3f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float jumpPower;
     private BoxCollider2D boxCollider;
@@ -17,7 +18,7 @@ public class playerController : MonoBehaviour
 
     private void Update(){
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
+        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y );
 
         // Flip the player's scale based on input
         if (horizontalInput > 0.01f){
@@ -39,7 +40,7 @@ public class playerController : MonoBehaviour
 
     private void Jump()
     {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jump);
             grounded = false;
     }
 
