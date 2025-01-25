@@ -17,7 +17,7 @@ public class playerController : MonoBehaviour
 
     private void Update(){
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
 
         // Flip the player's scale based on input
         if (horizontalInput > 0.01f){
