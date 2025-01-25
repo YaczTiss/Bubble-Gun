@@ -5,7 +5,7 @@ public class Door : MonoBehaviour
     [SerializeField] private Transform prev_room;
     [SerializeField] private Transform next_room;
     [SerializeField] private CameraController camera;
-    [SerializeField] private bool activate = true;
+    private bool activate = true;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,5 +19,13 @@ public class Door : MonoBehaviour
                 camera.MoveToNewRoom(prev_room);   
             }
         }
+    }
+
+    public void activateDoor(){
+        activate = true;
+    }
+
+    public void desactivateDoor(){
+        activate = false;
     }
 }
