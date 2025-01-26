@@ -13,16 +13,21 @@ public class HiddenWall : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         tilemapRenderer = GetComponent<TilemapRenderer>();
         if (activate)
-        {
             activateObject();
-        }else
-        {
+        else
             desactivateObject();
-        }
     }
 
     private void Update()
     {
+    }
+
+    public void UpdateActivationObject(){
+        activate = !activate;
+        if (activate == true)
+            activateObject();
+        else
+            desactivateObject();
     }
 
     public void activateObject()
@@ -34,6 +39,6 @@ public class HiddenWall : MonoBehaviour
     public void desactivateObject()
     {
         boxCollider.enabled = false;
-        tilemapRenderer.sortingOrder = 0;
+        tilemapRenderer.sortingOrder = -1;
     }
 }

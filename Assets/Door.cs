@@ -21,11 +21,7 @@ public class Door : MonoBehaviour
         }
     }
 
-    public void activateDoor(){
-        activate = true;
-    }
-
-    public void desactivateDoor(){
-        activate = false;
+    public void UpdateActivationDoor(){
+        activate = !activate;
     }
 }
