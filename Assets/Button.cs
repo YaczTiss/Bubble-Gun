@@ -21,13 +21,15 @@ public class Button : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            ActivateDoor.UpdateActivationDoor();
-            ActivateObject.UpdateActivationObject();
+            ButtonEffect();
         }
         if (collision.tag == "bubbled" && trigeredWhenBubble)
         {
-            ActivateDoor.UpdateActivationDoor();
-            ActivateObject.UpdateActivationObject();
+            ButtonEffect();
+        }
+        if (collision.tag == "bubble" && trigeredWhenBubble)
+        {
+            ButtonEffect();
         }
     }
 
@@ -36,15 +38,19 @@ public class Button : MonoBehaviour
         Debug.Log("hello");
         if (collision.tag == "Player" && canBeDesactivated)
         {
-            desactivateButtonEffect();
+            ButtonEffect();
         }
         if (collision.tag == "bubbled" && trigeredWhenBubble && canBeDesactivated)
         {
-            desactivateButtonEffect();
+            ButtonEffect();
+        }
+        if (collision.tag == "bubble" && trigeredWhenBubble && canBeDesactivated)
+        {
+            ButtonEffect();
         }
     }
 
-    private void desactivateButtonEffect(){
+    private void ButtonEffect(){
         ActivateDoor.UpdateActivationDoor();
         ActivateObject.UpdateActivationObject();
     }
