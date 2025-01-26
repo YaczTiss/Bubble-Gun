@@ -7,7 +7,13 @@ public class Button : MonoBehaviour
 
     [SerializeField] private bool trigeredWhenBubble = false;
 
+    [SerializeField] private bool trigeredWhenBubbled = false;
+
+    [SerializeField] private bool trigeredWhenCharacter = true;
+
     [SerializeField] private bool canBeDesactivated = false;
+    private bool isTrigerred = false;
+
 
     private void Awake()
     {
@@ -19,39 +25,45 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (isTrigerred == false)
         {
-            ButtonEffect();
-        }
-        if (collision.tag == "bubbled" && trigeredWhenBubble)
-        {
-            ButtonEffect();
-        }
-        if (collision.tag == "bubble" && trigeredWhenBubble)
-        {
-            ButtonEffect();
+            if (collision.tag == "Player" && trigeredWhenCharacter)
+            {
+                ButtonEffect();
+            }
+            if (collision.tag == "bubbled" && trigeredWhenBubbled)
+            {
+                ButtonEffect();
+            }
+            if (collision.tag == "bubble" && trigeredWhenBubble)
+            {
+                ButtonEffect();
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("hello");
-        if (collision.tag == "Player" && canBeDesactivated)
+        if (isTrigerred == true)
         {
-            ButtonEffect();
-        }
-        if (collision.tag == "bubbled" && trigeredWhenBubble && canBeDesactivated)
-        {
-            ButtonEffect();
-        }
-        if (collision.tag == "bubble" && trigeredWhenBubble && canBeDesactivated)
-        {
-            ButtonEffect();
+            if (collision.tag == "Player" && trigeredWhenCharacter && canBeDesactivated)
+            {
+                ButtonEffect();
+            }
+            if (collision.tag == "bubbled" && trigeredWhenBubbled && canBeDesactivated)
+            {
+                ButtonEffect();
+            }
+            if (collision.tag == "bubble" && trigeredWhenBubble && canBeDesactivated)
+            {
+                ButtonEffect();
+            }
         }
     }
 
     private void ButtonEffect(){
         ActivateDoor.UpdateActivationDoor();
         ActivateObject.UpdateActivationObject();
+        isTrigerred = !isTrigerred;
     }
 }
