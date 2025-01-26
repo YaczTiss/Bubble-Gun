@@ -31,7 +31,7 @@ public class Button : MonoBehaviour
             {
                 ButtonEffect();
             }
-            if (collision.tag == "bubbled" && trigeredWhenBubbled)
+            if (collision.tag == "Box" && trigeredWhenBubbled)
             {
                 ButtonEffect();
             }
@@ -50,7 +50,7 @@ public class Button : MonoBehaviour
             {
                 ButtonEffect();
             }
-            if (collision.tag == "bubbled" && trigeredWhenBubbled && canBeDesactivated)
+            if (collision.tag == "Box" && trigeredWhenBubbled && canBeDesactivated)
             {
                 ButtonEffect();
             }
