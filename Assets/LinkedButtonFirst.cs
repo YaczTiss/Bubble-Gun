@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class LinkedButton : MonoBehaviour
+public class LinkedButtonFirst : MonoBehaviour
 {
-    [SerializeField] private Door ActivateDoor;
-    [SerializeField] private HiddenWall ActivateObject;
-    [SerializeField] private LinkedButton2 previousButton;
 
     [SerializeField] private bool trigeredWhenBubble = false;
     [SerializeField] private bool trigeredWhenBubbled = false;
@@ -61,12 +58,7 @@ public class LinkedButton : MonoBehaviour
     }
 
     private void ButtonEffect(){
-        if (previousButton.getCollision())
-        {
-            ActivateDoor.UpdateActivationDoor();
-            ActivateObject.UpdateActivationObject();
-            isTrigerred = !isTrigerred;
-        }
+        isTrigerred = !isTrigerred;
     }
 
     public bool getCollision(){
