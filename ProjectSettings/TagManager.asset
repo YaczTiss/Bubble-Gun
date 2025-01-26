@@ -5,8 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+<<<<<<< Updated upstream
   - bubble
   - bubbled
+=======
+  - bubbled
+  - Undefined
+  - Box
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
