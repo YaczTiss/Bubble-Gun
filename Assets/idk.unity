@@ -21187,7 +21187,7 @@ GameObject:
   - component: {fileID: 1232702889}
   - component: {fileID: 1232702888}
   - component: {fileID: 1232702887}
-  - component: {fileID: 1232702886}
+  - component: {fileID: 1232702891}
   m_Layer: 0
   m_Name: LinkedButton1
   m_TagString: Untagged
@@ -21195,25 +21195,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1232702886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232702885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c216b5ccac3df07ca86315b4e4bd333, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivateDoor: {fileID: 0}
-  ActivateObject: {fileID: 0}
-  previousButton: {fileID: 0}
-  trigeredWhenBubble: 1
-  trigeredWhenBubbled: 1
-  trigeredWhenCharacter: 0
-  canBeDesactivated: 1
 --- !u!61 &1232702887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21479,6 +21460,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013320155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232702891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232702885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c272b5828bc35c0ea1c3b07111847e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigeredWhenBubble: 1
+  trigeredWhenBubbled: 1
+  trigeredWhenCharacter: 0
+  canBeDesactivated: 0
 --- !u!1 &1261200172
 GameObject:
   m_ObjectHideFlags: 0
@@ -24062,7 +24059,7 @@ GameObject:
   - component: {fileID: 1633989289}
   - component: {fileID: 1633989288}
   - component: {fileID: 1633989287}
-  - component: {fileID: 1633989286}
+  - component: {fileID: 1633989291}
   m_Layer: 0
   m_Name: LinkedButton2
   m_TagString: Untagged
@@ -24354,6 +24351,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013320155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633989291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633989285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc8ebc733951a381bf17644e7762ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousButton: {fileID: 1232702891}
+  trigeredWhenBubble: 1
+  trigeredWhenBubbled: 1
+  trigeredWhenCharacter: 0
+  canBeDesactivated: 0
 --- !u!1 &1674730853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2775783263479193281, guid: 522d88cf08172cb39b3cfcf6fdf41c2c, type: 3}
@@ -30988,7 +31002,7 @@ MonoBehaviour:
   trigeredWhenBubble: 1
   trigeredWhenBubbled: 1
   trigeredWhenCharacter: 0
-  canBeDesactivated: 1
+  canBeDesactivated: 0
 --- !u!61 &1994171441
 BoxCollider2D:
   m_ObjectHideFlags: 0
