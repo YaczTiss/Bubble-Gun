@@ -2239,6 +2239,8 @@ MonoBehaviour:
   ActivateDoor: {fileID: 644380431}
   ActivateObject: {fileID: 96132649}
   trigeredWhenBubble: 0
+  trigeredWhenBubbled: 0
+  trigeredWhenCharacter: 1
   canBeDesactivated: 0
 --- !u!61 &36900183
 BoxCollider2D:
@@ -5792,13 +5794,17 @@ PrefabInstance:
       propertyPath: trigeredWhenBubble
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4953209816215801983, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
+      propertyPath: trigeredWhenBubbled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5009323420534507387, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
       propertyPath: m_Size.x
       value: 1.476654
       objectReference: {fileID: 0}
     - target: {fileID: 5009323420534507387, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
       propertyPath: m_Size.y
-      value: 0.8330798
+      value: 1.2330514
       objectReference: {fileID: 0}
     - target: {fileID: 5009323420534507387, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
       propertyPath: m_Offset.x
@@ -5806,7 +5812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5009323420534507387, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
       propertyPath: m_Offset.y
-      value: -0.25596178
+      value: -0.45594758
       objectReference: {fileID: 0}
     - target: {fileID: 6737470075984587344, guid: e1fa64b4489afe5329d8acb2d3166310, type: 3}
       propertyPath: m_LocalScale.x
@@ -11358,7 +11364,7 @@ Transform:
   m_GameObject: {fileID: 1158465584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.04, y: 0, z: 0}
+  m_LocalPosition: {x: -36.11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13819,6 +13825,8 @@ MonoBehaviour:
   ActivateDoor: {fileID: 482069587}
   ActivateObject: {fileID: 2140979308}
   trigeredWhenBubble: 0
+  trigeredWhenBubbled: 0
+  trigeredWhenCharacter: 1
   canBeDesactivated: 0
 --- !u!61 &1269137464
 BoxCollider2D:
@@ -18343,7 +18351,7 @@ Transform:
   m_GameObject: {fileID: 2024633015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.3484, y: 0.08, z: 0}
+  m_LocalPosition: {x: -72.3484, y: 0.12, z: 0}
   m_LocalScale: {x: 1.0057, y: 0.9256, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18567,7 +18575,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivateDoor: {fileID: 893469232}
   ActivateObject: {fileID: 1158465587}
-  trigeredWhenBubble: 1
+  trigeredWhenBubble: 0
+  trigeredWhenBubbled: 1
+  trigeredWhenCharacter: 0
   canBeDesactivated: 1
 --- !u!61 &2024633021
 BoxCollider2D:
